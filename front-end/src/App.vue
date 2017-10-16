@@ -15,9 +15,7 @@
 </div>
 </template>
 <script>
-import {
-    Store
-} from './controllers/store'
+import {mapGetters} from 'vuex';
 export default {
     name: 'app',
     data() {
@@ -31,9 +29,7 @@ export default {
         }
     },
     computed: {
-        totalCost() {
-            return Store.totalCost;
-        }
+        ...mapGetters(['totalCost'])
     }
 }
 </script>

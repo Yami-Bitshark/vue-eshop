@@ -9,7 +9,10 @@ import ProductList from './components/ProductList.vue';
 import ShoppingCart from './components/ShoppingCart.vue';
 
 //services and extentions
+import Vuex from 'vuex';
+import store from './controllers/appStore';
 Vue.use(Element,{locale});
+Vue.use(Vuex);
 
 //components
 Vue.component('navbar',NavBar);
@@ -23,5 +26,6 @@ Vue.component('shoppingcart',ShoppingCart);
 
 new Vue({
   el: '#app',
+  store,
   render: h => h(App)
 })

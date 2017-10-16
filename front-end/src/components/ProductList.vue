@@ -35,17 +35,14 @@
   </el-table>
 </template>
 <script>
-import {Store} from '../controllers/store'
+import {mapMutations} from 'vuex';
+import {mapState} from 'vuex';
 export default {
-  data() {
-    return {
-     products: Store.$data.products
-    };
+  computed : {
+      ...mapState(['products'])
   },
   methods: {
-   addToCart(product){
-    Store.addToCart(product)
-   }
+   ...mapMutations(['addToCart'])
   }
 }
 </script>

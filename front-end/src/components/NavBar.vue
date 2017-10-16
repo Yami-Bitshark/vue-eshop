@@ -5,12 +5,10 @@
 </template>
 
 <script>
-import {Store} from '../controllers/store';
+import {mapGetters} from 'vuex';
 export default {
     computed: {
-        totalItems() {
-            return Store.totalItems;
-        }
+        ...mapGetters(['totalItems'])
     }
 }
 </script>

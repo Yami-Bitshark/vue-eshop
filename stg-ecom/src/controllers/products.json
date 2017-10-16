@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Windows Xp", "price": 100, "quantity": 2, "sku": 1, "images": ["https://images.sftcdn.net/images/t_optimized,f_auto/p/ddd2756e-96d3-11e6-b14f-00163ec9f5fa/2357821050/service-pack-1-for-windows-xp-screenshot.jpg"] },
+  { "id": 2, "name": "Linux Ubuntu", "price": 5, "quantity": 10, "sku": 2, "images": ["https://tr2.cbsistatic.com/hub/i/r/2016/08/09/e450825d-6592-49cd-a2a8-e172ef086841/resize/770x/d43e6e8ffe1465f20fe473f7d58cc896/ubuntuhero.jpg"] },
+  { "id": 3, "name": "Yankee Hat", "price": 20, "quantity": 5, "sku": 3, "images": ["https://images-na.ssl-images-amazon.com/images/I/91QzLZ3tIzL._SX522_.jpg"] }
+]

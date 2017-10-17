@@ -11,7 +11,9 @@ var init = function(app) {
         extended: true
     }));
     app.use(cors({origin : '*'}));
-    app.use('/api/v' + apiVersion + '/search', require('./controllers/api/v1/search.js'));
+    app.use('/products', require('./routes/products'));
+    app.use('/history', require('./routes/history'));
+    app.use('/commit', require('./routes/commit'));
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {
         var err = new Error('Not Found');

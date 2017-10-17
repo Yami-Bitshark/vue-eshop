@@ -23,7 +23,7 @@
     <el-table-column
       label="Operations"
       style="width: 25%">
-      <template scope="scope">
+      <template slot-scope="scope">
         <el-button
           @click.native.prevent="addToCart(products[scope.$index])"
           type="text"

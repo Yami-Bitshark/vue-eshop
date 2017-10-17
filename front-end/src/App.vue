@@ -9,7 +9,7 @@
         <el-tab-pane label="Shopping Cart" name="second">
             <h1>Shopping Cart</h1>
             <shoppingcart></shoppingcart>
-            <p><b>Total Cost: {{ totalCost}}</b></p>
+            <p><b>Total Cost: {{ totalCost}} DH</b></p>
         </el-tab-pane>
     </el-tabs>
 </div>

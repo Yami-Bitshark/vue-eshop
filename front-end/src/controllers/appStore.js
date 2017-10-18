@@ -72,7 +72,7 @@ const actions = {
         var data = [];
         if (state.cart.length !== 0) {
             for (var i = 0; i < state.cart.length; i++) {
-                data.push([state.cart[i].id, state.cart[i].quantity]);
+                data.push([state.cart[i].details.id, state.cart[i].quantity]);
             }
             axios.post('http://localhost:3000/commit', {
                     list: data

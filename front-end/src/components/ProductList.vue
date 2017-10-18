@@ -37,12 +37,16 @@
 <script>
 import {mapMutations} from 'vuex';
 import {mapState} from 'vuex';
+import {mapActions} from 'vuex';
 export default {
   computed : {
       ...mapState(['products'])
   },
   methods: {
    ...mapMutations(['addToCart'])
+  },
+  beforeCreate(){
+      this.$store.dispatch('loadProducts');
   }
 }
 </script>

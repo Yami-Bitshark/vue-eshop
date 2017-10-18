@@ -2,6 +2,7 @@ CREATE TABLE products(
     id serial UNIQUE,
     name text,
     price integer,
+    quantity integer,
     sku integer,
     primary key(id)
 );

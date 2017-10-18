@@ -14,10 +14,15 @@
       </template>
     </el-table-column>
 </el-table>
+
 </template>
 <script>
-import {mapMutations} from 'vuex';
-import {mapState} from 'vuex';
+import {
+    mapMutations
+} from 'vuex';
+import {
+    mapState
+} from 'vuex';
 export default {
     computed: {
         ...mapState(['cart'])

@@ -9,13 +9,16 @@
         <el-tab-pane label="Shopping Cart" name="second">
             <h1>Shopping Cart</h1>
             <shoppingcart></shoppingcart>
-            <p><b>Total Cost: {{ totalCost}} DH</b></p>
+            <p><b>Total Cost: {{ totalCost}} DH</b>
+            <el-button type="success" icon="plus" @click='commit' size="mini"></el-button>
+            </p>
         </el-tab-pane>
     </el-tabs>
 </div>
 </template>
 <script>
 import {mapGetters} from 'vuex';
+import {mapActions} from 'vuex';
 export default {
     name: 'app',
     data() {
@@ -25,7 +28,9 @@ export default {
     },
     methods: {
         handleClick(tab, event) {
-            console.log(tab, event);
+        },
+        commit : function(){
+            this.$store.dispatch('commitPurchase')
         }
     },
     computed: {

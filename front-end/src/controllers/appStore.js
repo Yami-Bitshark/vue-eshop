@@ -7,7 +7,8 @@ Vue.use(Vuex);
 const state = {
     products: [],
     cart: [],
-    totalQuantity: 0
+    totalQuantity: 0,
+    pHistory: []
 
 };
 
@@ -44,6 +45,10 @@ const mutations = {
     },
     clearCart: function(state) {
         state.cart = [];
+        state.totalQuantity = 0;
+    },
+    fillHistory: function(state, data) {
+        state.pHistory = data;
     }
 };
 
@@ -87,6 +92,15 @@ const actions = {
         } else {
             alert('cart empty');
         }
+    },
+    loadHistory: function(appStore) {
+        axios.get('http://localhost:3000/history')
+            .then(function(resp) {
+                appStore.commit('fillHistory', resp.data.data);
+            })
+            .catch(function(e) {
+                alert('Loading Purchase History Failed');
+            });
     }
 };
 
